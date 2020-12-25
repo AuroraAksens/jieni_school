@@ -1,0 +1,38 @@
+/* pages/index//action/action.wxss */
+.list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100rpx;
+  position: relative;
+}
+
+.list>.box {
+  position: absolute;
+  top: 395rpx;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.list>.box>.box2 {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #030303;
+  margin-top: 15rpx;
+  width: 100%;
+}
+
+.list>.box>.box3 {
+  width: 277rpx;
+  height: 58rpx;
+  background: #EFC243;
+  border-radius: 29px;
+  font-size: 23rpx;
+  font-weight: bold;
+  color: #f3e8e8;
+  line-height: 58rpx;
+  text-align: center;
+  margin-top: 41rpx;
+}

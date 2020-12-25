@@ -1,0 +1,35 @@
+<image class="topImg" src="/images/icon/20.png" />
+<view class="m-tabBox">
+    <view class="topBox">
+        <image src="/images/icon/19.png" />
+        <picker style="margin-left:20rpx" mode="date" fields="month" value="{{date}}" start="2020-10" end="2025-10" bindchange="bindDateChange">
+            <view class="picker">选择日期：{{date}}</view>
+        </picker>
+    </view>
+    <view class="box">
+        <view class="left">
+            <view class="top">本月收入 (元)</view>
+            <view class="bottom">
+                <text>￥</text>
+                {{listData.count}}
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="bigBox">
+    <view class="m-listTitle">
+        <view class="list1">用户名</view>
+        <view class="list2">消费金额</view>
+        <view class="list3">消费日期</view>
+        <view class="list4">佣金奖励</view>
+    </view>
+    <block wx:for="{{listData.list}}" wx:key="index">
+        <view class="m-lists">
+            <view class="list1">{{item.user.name}}</view>
+            <view class="list2">{{item.price}}元</view>
+            <view class="list3">{{item.create_time}}</view>
+            <view style="color:rgba(235, 87, 87, 1)" class="list4">+{{item.com_price}}</view>
+        </view>
+    </block>
+</view>

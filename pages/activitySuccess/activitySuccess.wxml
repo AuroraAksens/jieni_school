@@ -1,0 +1,32 @@
+<view class="success">
+    <view class="success-top">
+        <image src="/images/icon/27.png" />
+        <view>报名成功</view>
+    </view>
+    <view class="success-body">
+        <view class="body-title">
+            {{name}}
+        </view>
+
+        <view class="body-box">
+            <view class="box">
+                <image src="/images/icon/23.png" />
+                <view>{{starttime}}</view>
+            </view>
+
+            <view class="box">
+                <image src="/images/icon/22.png" />
+                <view>{{place}}</view>
+            </view>
+
+            <view class="box">
+                <image src="/images/icon/25.png" />
+                <view>{{phone}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="success-bottom">
+        <button open-type="share" class="but1">分享给朋友</button>
+        <view class="but2" bind:tap="goMinebao">我的报名</view>
+    </view>
+</view>

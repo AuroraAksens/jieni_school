@@ -1,0 +1,57 @@
+/* pages/checkCode/checkCode.wxss */
+page {
+    background: linear-gradient(89deg, #F0C651 0%, #EFC142 61%, #ECC65B 62%, #EFBD34 100%);
+}
+
+.bg-white {
+    background-color: rgba(1, 205, 205, 1);
+    color: white;
+}
+
+.check {
+    width: 92%;
+    margin: 40rpx auto;
+    background-color: white;
+    padding-bottom: 60rpx;
+}
+
+.check>.top {
+    width: 90%;
+    margin: 30rpx auto;
+}
+
+.check>.top>.left {
+    color: #F0C651;
+    font-weight: bold;
+    font-size: 28rpx;
+}
+
+.check>.top>.left>image {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+.check>.top>.right {
+    color: #4d4b4b;
+    font-weight: bold;
+}
+
+.check>.body {
+    width: 600rpx;
+    margin: auto;
+}
+
+.check>.body>image {
+    width: 400rpx;
+    height: 400rpx;
+}
+
+.check>.bottom {
+    width: 500rpx;
+    height: 70rpx;
+    margin: auto;
+    font-size: 28rpx;
+    border-radius: 40rpx;
+    overflow: hidden;
+}

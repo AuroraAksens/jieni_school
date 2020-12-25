@@ -1,0 +1,114 @@
+
+<!-- 申请 -->
+<block wx:if="{{isShow == 0}}">
+  <view class="examine">
+    <image mode="widthFix" src="/images/partner2.png" />
+    <view class="tap" bind:tap="getExamine"></view>
+  </view>
+</block>
+<!-- 申请结束 -->
+
+
+<!-- 审核中 -->
+<block wx:if="{{isShow == 1}}">
+  <view class="examine">
+    <image mode="widthFix" src="/images/partner3.png" />
+  </view>
+</block>
+<!-- 审核中结束 -->
+
+
+<block wx:if="{{isShow == 2}}">
+
+<!-- 顶部图片 -->
+<image class="topImg" src="/images/partner.png"></image>
+<!-- 顶部图片结束 -->
+
+
+<!-- 合伙人名片 -->
+<view class="partner">
+  <image src="/images/partner1.png" />
+  <view class="title">{{listData2.identity}}</view>
+  <view class="date">申请时间：{{listData2.partner_time}}</view>
+</view>
+<!-- 合伙人名片结束 -->
+
+
+
+<!-- 提现 -->
+<view class="take">
+  <view class="take-top">
+    <view class="tt-left">
+      <view style="font-size: 28rpx;font-weight: bold;color: #030303;">可提现金额</view>
+      <view style="font-size: 26rpx;margin-top:10rpx;color: #D1D1D1;">{{listData2.balance}}</view>
+    </view>
+    <view class="tt-right" bind:tap="goMoneys">
+      提现
+    </view>
+  </view>
+
+  <view class="take-bottom">
+    <view class="bot-box" style="border-right: 1rpx solid #70707038;">
+      <view>累计收入</view>
+      <view style="margin-top:20rpx;font-size: 24rpx;">{{listData2.com_price}}元</view>
+    </view>
+    <view class="bot-box">
+      <view>累计邀请</view>
+      <view style="margin-top:20rpx;font-size: 24rpx;">{{listData2.number}}人</view>
+    </view>
+  </view>
+</view>
+<!-- 提现结束 -->
+
+
+<!-- 选项框 -->
+<view class="nav-card">
+
+  <view class="navBox" bind:tap="goInvList">
+      <image src="/images/icon/partner1.png" />
+      <view class="boxText">我的邀请</view>
+  </view>
+
+  <view class="navBox" bind:tap="goInvCome">
+      <image src="/images/icon/partner3.png" />
+      <view class="boxText">累计收入</view>
+  </view>
+
+  <view class="navBox" bind:tap="goMoney">
+      <image src="/images/icon/partner2.png" />
+      <view class="boxText">提现记录</view>
+  </view>
+
+</view>
+<!-- 选项框结束 -->
+
+
+<!-- 邀请按钮 -->
+<view class="parBut" bind:tap="tapBut">
+  邀请好友共同推广
+</view>
+<!-- 邀请按钮结束 -->
+
+
+
+<!-- 海报 -->
+<poster id="poster" hide-loading="{{false}}" preload="{{false}}" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+</poster>
+<!-- 海报结束 -->
+
+
+
+<!-- 分享弹框 -->
+<view class="parBox" wx:if="{{showImg}}" bind:tap="tapBut">
+  <view class="p-box">
+    <image src="/images/icon/28.png" />
+  </view>
+  <view class="p-but"  bindtap="onCreateOtherPoster">
+    邀请分享给朋友
+  </view>
+</view>
+<!-- 分享弹框结束 -->
+
+</block>
+
+

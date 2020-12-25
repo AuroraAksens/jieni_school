@@ -1,0 +1,431 @@
+/**app.wxss**/
+page {
+  background-color: #EEEEEE;
+  box-sizing: border-box;
+}
+
+/* 引入全局工具类样式 */
+@import 'common/style.wxss';
+
+
+/* 导航条 */
+.nav {
+  width: 100%;
+  height: 60rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav>.nav-tabbar {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.nav>.school {
+  width: 35%;
+  text-align: right;
+}
+
+.nav>.school>.schoolImg>image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.nav>.nav-tabbar>.nav-tabbar-card {
+  width: 100rpx;
+  height: 100%;
+  line-height: 55rpx;
+  text-align: start;
+  color: #989898;
+  position: relative;
+  font-weight: 600;
+  font-size: 32rpx;
+}
+
+.nav>.nav-tabbar>.nav-tabbar-cards {
+  width: 100rpx;
+  height: 100%;
+  text-align: start;
+  color: #000000;
+  position: relative;
+  font-weight: 600;
+  font-size: 38rpx;
+}
+
+.nav>.nav-tabbar>.nav-tabbar-cardss {
+  width: 100rpx;
+  height: 100%;
+  line-height: 55rpx;
+  text-align: start;
+  color: #EFC243;
+  position: relative;
+  font-weight: 600;
+  font-size: 32rpx;
+}
+
+.nav>.nav-tabbar>.nav-tabbar-cards>.m-bottom {
+  width: 50rpx;
+  height: 8rpx;
+  border-radius: 25rpx;
+  background: linear-gradient(180deg, #F0C651 0%, #EFC142 61%, #ECC65B 62%, #EFBD34 100%);
+  position: absolute;
+  bottom: 0rpx;
+  left: 0rpx;
+}
+
+/* 导航条结束 */
+
+
+/* swiper */
+.m-swiper {
+  width: 100%;
+  height: 300rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.m-swiper>.m-swiper-page {
+  width: 100%;
+  height: 100%;
+}
+
+.m-swiper>.m-swiper-page>.m-swiper-item {
+  width: 100%;
+  height: 100%;
+}
+
+.m-swiper-item>image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+/* 指示点的样式 */
+.swiper .wx-swiper-dot {
+  width: 15rpx;
+  height: 15rpx;
+  background: gray;
+  border-radius: 15rpx;
+}
+
+.swiper .wx-swiper-dot.wx-swiper-dot-active {
+  width: 30rpx;
+  height: 15rpx;
+  background: white;
+  border-radius: 15rpx;
+}
+
+/* swiper结束 */
+
+
+/* m-card */
+.m-card {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.m-card>.head {
+  width: 100%;
+  position: relative;
+}
+
+.m-card>.head>.img {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 100rpx;
+  overflow: hidden;
+}
+
+.m-card>.head>.img2>image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 100rpx;
+  overflow: hidden;
+}
+
+.m-card>.head>.img>image {
+  width: 100%;
+  height: 100%;
+}
+
+.m-card>.head>.img>.vip {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  bottom: 33rpx;
+  left: 100rpx;
+}
+
+.m-card>.head>.title {
+  width: 500rpx;
+  height: 100rpx;
+}
+
+.m-card>.head>.title>.title-name {
+  width: 100%;
+  height: 50rpx;
+  font-size: 36rpx;
+}
+
+.m-card>.head>.title>.title-bottom {
+  width: 100%;
+  height: 50rpx;
+  font-size: 20rpx;
+  color: #999999;
+}
+
+.m-card>.head>.title>.title-bottom>view {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Gender {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.official {
+  width: 60rpx;
+  height: 30rpx;
+}
+
+.m-card>.head>.status-dynamic {
+  width: 140rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 45rpx;
+}
+
+
+.m-card>.body {
+  width: 100%;
+}
+
+.m-card>.body>.img {
+  width: 100%;
+  padding-left: 25rpx;
+  padding-right: 20rpx;
+  flex-wrap: wrap;
+}
+
+.m-card>.body>.img>image {
+  width: 140rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+}
+
+.m-card>.body>.task {
+  width: 530rpx;
+  background-color: #FFFDF5;
+  margin: auto;
+}
+
+
+.m-card>.body>.task>.head {
+  font-weight: 600;
+  font-size: 30rpx;
+  border-bottom: 1px solid #e6e6e688;
+}
+
+.m-card>.body>.task>.head>view {
+  font-size: 24rpx;
+}
+
+.m-card>.body>.task>.content {
+  font-size: 25rpx;
+  width: 80%;
+  margin: auto;
+}
+
+.m-card>.body>.task>.content>.remarks {
+  width: 80%;
+  /* padding-left: 68rpx; */
+  font-size: 21rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+
+.m-card>.foot {
+  width: 100%;
+}
+
+.m-card>.foot>.goods {
+  width: 330rpx;
+}
+
+.m-card>.foot>.goods>.box>image {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.m-card>.foot>.goods>.box>button>image {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+
+/* m-card结束 */
+
+
+
+/* 表单组件 */
+.b-item-box {
+  width: 94%;
+  background-color: white;
+  padding: 20rpx 20rpx 20rpx 20rpx;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+}
+
+.item-box {
+  width: 94%;
+  padding: 20rpx 20rpx 20rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+}
+
+.item-text {
+  width: 94%;
+  margin-top: 20rpx;
+  background-color: white;
+  border-radius: 15rpx;
+  padding: 10rpx 0 20rpx 40rpx;
+  line-height: 80rpx;
+}
+
+.item-text>.text {
+  width: 590rpx;
+  min-height: 150rpx;
+  margin: 20rpx 0 20rpx 0;
+  padding: 20rpx 20rpx 20rpx 20rpx;
+  background-color: #FAFAFA;
+  border-radius: 15rpx;
+  font-size: 25rpx;
+  line-height: 25rpx;
+}
+
+.item-text>.item-cont {
+  width: 94%;
+  margin-top: 20rpx;
+  background-color: white;
+  border-radius: 15rpx 15rpx 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.item-text>.text-right {
+  width: 100%;
+  height: 65rpx;
+  margin: auto;
+  position: relative;
+}
+
+.item-text>.text-right>.buttom-del {
+  width: 180rpx;
+  height: 65rpx;
+  background-color: rgb(253, 82, 60);
+  color: white;
+  border-radius: 50rpx;
+  font-size: 25rpx;
+  text-align: center;
+  line-height: 65rpx;
+  position: absolute;
+  right: 0;
+}
+
+.item-money {
+  width: 94%;
+  margin-top: 20rpx;
+  background-color: white;
+  border-radius: 15rpx;
+  padding: 20rpx 20rpx 20rpx 25rpx;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.item-money>.right {
+  width: 300rpx;
+  height: 80rpx;
+}
+
+
+
+
+
+/* 弹框样式 */
+.explainTips {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(105, 105, 105, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.explainTips>.tipsBox {
+  width: 70%;
+  background-color: white;
+  border-radius: 30rpx;
+}
+
+.explainTips>.tipsBox>.heads {
+  width: 100%;
+  height: 100rpx;
+  font-size: 32rpx;
+  color: #030303;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.explainTips>.tipsBox>.body {
+  width: 80%;
+  font-size: 26rpx;
+  margin: 50rpx auto 40rpx auto;
+  color: #646464;
+  line-height: 50rpx;
+  text-indent: 1.5em;
+}
+
+.explainTips>.tipsBox>.but-box {
+  width: 80%;
+  margin: 20rpx auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.explainTips>.tipsBox>.but-box>.but {
+  width: 100%;
+  background: linear-gradient(180deg, #EFC243 0%, #F6CE5F 100%);
+  color: white;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  text-align: center;
+  margin: 30rpx auto 30rpx auto;
+  border-radius: 55rpx;
+}

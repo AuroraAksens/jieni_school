@@ -1,0 +1,26 @@
+/* pages/my-details/my-details.wxss */
+page{
+  background-color: white;
+}
+.item-box{
+  border-bottom: 1rpx solid #7070704c;
+}
+.item-box>.img {
+  height: 70rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-box>.img>image {
+  width: 70rpx;
+  height: 70rpx;
+}
+.MYtips{
+  width: 80%;
+  height: 60rpx;
+  margin: 40rpx auto;
+  color: #7070707c;
+  font-size: 24rpx;
+  text-align: center;
+}

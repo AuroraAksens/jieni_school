@@ -1,0 +1,38 @@
+<!--pages/identity/identity.wxml-->
+<view class="ide">
+	<view class="head d-fx ai-center" style="overflow: hidden;">
+		<image class="pr-10 pl-30" src="/images/icon/protect.png"></image>
+		信息安全保护中，未经用户允许绝不对外提供
+	</view>
+
+	<view class="ide-box d-fx jc-center ai-center flex-cl">
+    <view class="ide-text">需上传本人身份证和学生证</view>
+		<image wx:if="{{imageData1 == ''}}" src="/images/photograph.png" bindtap="chooseImg"></image>
+		<image mode="aspectFit" class="bou-20" wx:else src="{{imageData1}}" bindtap="chooseImg"></image>
+		<view class="mt-30">
+			上传 身份证（正面）
+		</view>
+	</view>
+
+	<view class="ide-box d-fx jc-center ai-center flex-cl">
+		<image wx:if="{{imageDatas2 == ''}}" src="/images/photograph2.png" bindtap="chooseImgs"></image>
+		<image mode="aspectFit" class="bou-20" wx:else src="{{imageDatas2}}" bindtap="chooseImgs"></image>
+		<view class="mt-30">
+			上传 身份证（反面）
+		</view>
+	</view>
+
+	<view class="ide-box d-fx jc-center ai-center flex-cl">
+		<image wx:if="{{imageDatas3 == ''}}" src="/images/photograph3.png" bindtap="chooseImgs2"></image>
+		<image mode="aspectFit" class="bou-20" wx:else src="{{imageDatas3}}" bindtap="chooseImgs2"></image>
+		<view class="mt-30">
+			上传 学生证
+		</view>
+		<view class="i-ide-box mt-30">
+			学生证照片需本人手持拍照上传
+		</view>
+	</view>
+
+	<button wx:if="{{imageData == '' || imageDatas == '' || imageDatass == '' }}" class="btn mt-30">提交</button>
+	<button wx:else class="btns mt-30" bindtap="addIdCard">提交</button>
+</view>

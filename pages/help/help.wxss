@@ -1,0 +1,45 @@
+page{
+  background-color: #ffffff;
+}
+button::after {
+  border: none;
+}
+
+button {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: inherit;
+  color: #646C74;
+}
+
+.button-hover {
+  background-color: transparent;
+}
+
+.buttom {
+  width: 670rpx;
+  height: 80rpx;
+  background: linear-gradient(180deg, #F0C651 0%, #EFC142 61%, #ECC65B 62%, #EFBD34 100%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.16);
+  position: fixed;
+  bottom: 20rpx;
+  left: 38rpx;
+}
+
+.buttom>.body {
+  width: 400rpx;
+  height: 80rpx;
+  margin:  auto;
+  font-weight: 600;
+  font-size: 39rpx;
+}
+
+.buttom>.body>button>image {
+  width: 73rpx;
+  height: 73rpx;
+}
+
+.buttom>.body>button{
+  color: #ffffff;
+}

@@ -1,0 +1,87 @@
+<view class="tab-bar" wx:if="{{sta == 0}}">
+	<view wx:if="{{sta == 0}}" wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+		<image src="{{selected == index ? item.selectedIconPath : item.iconPath}}"></image>
+		<view style="color: {{selected == index ? selectedColor : color}}">{{item.text}}</view>
+	</view>
+	<image wx:if="{{sta == 0}}" class="tab-bar-add" src="/images/tabbar/add.png" bindtap="dySelect"></image>
+</view>
+
+<view class="dynamicBox" wx:if="{{sta == 1}}" bindtap="dySelect"></view>
+<view class="dynamicSelect {{sta == 0 ? 'active2' : 'active1'}}">
+	<view class="head">
+
+		<view class="box" style=" width: 80rpx;height: 160rpx;">
+			<navigator url="/pages/dynamic/dynamic?statusID=0" hover-class="none" bindtap="clearstatus">
+				<image src="/images/icon/tab-dynamic.png" style=" width: 90rpx;height: 90rpx;"></image>
+				动态
+			</navigator>
+		</view>
+
+		<view class="box">
+			<navigator url="/pages/add-task/add-task" hover-class="none" bindtap="clearstatus">
+				<image src="/images/icon/tab-task.png" style="width: 90rpx;height: 90rpx;"></image>
+				任务
+			</navigator>
+		</view>
+
+		<view class="box">
+			<navigator url="/pages/dynamic/dynamic?statusID=1" hover-class="none" bindtap="clearstatus">
+				<image src="/images/icon/tab-transaction.png" style="width: 90rpx;height: 90rpx;"></image>
+				市场
+			</navigator>
+		</view>
+
+	</view>
+
+	<view class="body">
+		<image class="{{sta == 1 ? 'gobackAct1' : 'gobackAct2'}}" src="/images/tabbar/goback.png" bindtap="dySelect"></image>
+	</view>
+</view>
+
+
+<view class="popUp" wx:if="{{selected ==0 && state == false}}">
+	<view class="popUp-box">
+		<image mode="scaleToFill" src="/images/autoLogin.png"></image>
+		<!-- <view class="popTitle">首单奖励</view> -->
+		<view class="popText">每次首次接单完成任务，将随机获得现金红包奖励，快来看看有什么惊喜等着你吧</view>
+		<button class="popBut" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权</button>
+		<button class="popButs" bindtap="noEmpower">暂不授权</button>
+	</view>
+
+	<!-- 引导页 -->
+	<view class="guide" wx:if="{{type == 1}}">
+		<image mode="aspectFill" src="/images/index.png"></image>
+		<!-- <view class="but" bindtap="{{agreementStatus == false ? 'showtongyi' : 'guideType'}}">GO</view> -->
+		<view class="but" bindtap="guideType">GO</view>
+
+
+		<!-- 用户协议 -->
+		<!-- <view class="agreement">
+			<label class="checkbox" bindtap="showagr">
+				<checkbox data-checked="{{agreementStatus == true ? false : true}}" class="cb" value="cb" checked="true" />
+			</label>
+			<view bindtap="showagreement" class="cbt">已同意用户协议</view>
+		</view>
+
+		<view class="agreementView" wx:if="{{agreement == true}}">
+			<view class="top">用户注册协议</view>
+			<scroll-view scroll-y="true" style="height: 1000rpx;" class="body">
+
+
+									协议内容
+
+
+			</scroll-view>
+			<view class="bottom" bindtap="showagreement">
+				确认
+			</view>
+		</view> -->
+
+		<!-- 用户协议结束 -->
+
+		
+	</view>
+	<!-- 引导页结束 -->
+
+
+</view>

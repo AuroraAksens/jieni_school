@@ -1,0 +1,64 @@
+<!-- 搜索框 -->
+<view class="search" wx:if="{{sta == 0}}">
+    <input type="text" bindblur="getText" placeholder="输入活动名称" placeholder-style="color:#EFC243" />
+</view>
+<!-- 搜索框结束 -->
+
+
+
+<!-- 活动卡 -->
+<view class="actCard">
+    <view class="act-box" wx:for="{{listData}}" wx:key="index">
+        <view class="actBox-top">
+            <view class="at-left">
+                <image mode="aspectFill" src="{{item.image}}" />
+                <block wx:if="{{sta == 0}}">
+                    <view wx:if="{{item.is_state == 0}}" class="min-boxss">报名中</view>
+                    <view wx:if="{{item.is_state == 1}}" class="min-boxs">已结束</view>
+                </block>
+
+                <block wx:if="{{sta == 1}}">
+                    <view wx:if="{{item.act_user.status == 0}}" class="min-box">待入场</view>
+                    <view wx:if="{{item.act_user.status == 1}}" class="min-boxs">已入场</view>
+                </block>
+            </view>
+            <view class="at-right">
+                <view class="arBox1">{{item.name}}</view>
+                <view class="arBox2">
+                    <image src="/images/icon/23.png" />
+                    {{item.start_time}}
+                </view>
+                <view class="arBox2">
+                    <image src="/images/icon/22.png" />
+                    {{item.place}}
+                </view>
+            </view>
+        </view>
+        <view class="actBox-bottom">
+            <view class="ab-left">
+                <view>结束报名时间:</view>
+                <view style="color:#f51616;opacity: 0.4;">{{item.end_time}}</view>
+            </view>
+            <view  bind:tap="goActDate" data-id="{{item.activity_id}}" class="ab-right" wx:if="{{sta == 0 && item.is_state == 0}}">
+                我要报名
+            </view>
+            <view class="ab-rights" wx:if="{{sta == 1 && item.act_user.status == 0}}" data-id="{{item.activity_id}}" bind:tap="goQRcode">
+                出示二维码
+            </view>
+            <view class="ab-rightss" wx:if="{{sta == 1 && item.act_user.status == 1 && item.is_state == 0}}" bind:tap="overCode">
+                已入场
+            </view>
+            <view class="ab-rightsss" wx:if="{{sta == 1 && item.act_user.status == 1 && item.is_state == 1}}">
+                已结束
+            </view>
+            <view class="ab-rightsss" wx:if="{{sta == 0 && item.is_state == 1}}">
+                已结束
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 活动卡结束 -->
+
+
+<!-- 暂无数据 -->
+<view wx:if="{{sta == 1 && listData.length == 0}}" class="zhanwu">您暂无报名数据</view>

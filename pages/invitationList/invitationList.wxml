@@ -1,0 +1,49 @@
+
+<view class="m-tabBox">
+	<view class="box">
+		<view bindtap="goDirIncomeitem" class="left">
+			<view class="bottom">
+				<view class="top">{{myuser.length}}</view>
+				<view class="bottom">我的团队人数(人)</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+
+<view class="m-list">
+	<view class="top">
+		<image mode="aspectFit" style="width:154rpx;height:74rpx" src="/images/icon/18.png"></image>
+	</view>
+	<view class="m-listTitle">
+		<view class="list1">用户头像</view>
+		<view style="flex: 1;" class="list2">名称</view>
+		<view class="list3">认证日期</view>
+		<view style="flex: 1;" class="list2">是否认证</view>
+	</view>
+	<!--  --> 
+	<view class="gundong" style="height: calc(100% - 200rpx);">
+		<block wx:if="{{myuser.length}}">
+			<block wx:for="{{myuser}}">
+				<view style="{{index % 2 == 0?'background-color:rgba(240, 240, 240, 1)':'background-color:#fff'}}" class="m-lists">
+					<view class="list1">
+						<view class="cu-avatar sm round margin-left" style="background-image:url({{item.image}});"></view>
+					</view>
+					<view style="flex: 1;" class="list2">{{item.name}}</view>
+					<view class="list3">{{item.time}}</view>
+					<view style="flex: 1;color: #EFC243;" class="list2">{{item.text}}</view>
+				</view>
+			</block>
+		</block>
+		<view wx:else class="airPrp">
+			<view class="bottom">暂无数据</view>
+		</view>
+	</view>
+
+</view>
+
+
+
+<view class="m-topImges">
+	<image mode="widthFix" style="width:460rpx;height：460rpx" src="/images/icon/17.png"></image>
+</view>

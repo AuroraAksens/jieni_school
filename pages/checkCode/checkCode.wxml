@@ -1,0 +1,11 @@
+<view class="check bou-20">
+    <view class="top d-fx jc-between pt-20">
+        <view class="left d-fx jc-center ai-center py-30 px-30">
+            <image src="/images/touxiang-img.png"></image>
+            <view class="ml-30">核销员</view>
+        </view>
+    </view>
+    <view class="body d-fx jc-center ai-center py-30">
+        <image src="/images/icon/checkQRcode.png" bindtap="checkCode"></image>
+    </view>
+</view>

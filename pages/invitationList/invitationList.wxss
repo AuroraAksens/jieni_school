@@ -1,0 +1,193 @@
+page {
+    background: linear-gradient(180deg, #EFC243 0%, #EED58F 77%, #F9DB87 87%, #FFD86D 100%);
+}
+
+
+.m-list>.box {
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30rpx;
+}
+
+.m-list>.box>.left {
+    font-size: 36rpx;
+    font-weight: 400;
+    color: #fff;
+}
+
+.cuIcon-calendar {
+    font-size: 36rpx;
+    font-weight: 400;
+    color: #fff;
+}
+
+/*  */
+.rili {
+    position: fixed;
+    top: 200rpx;
+    width: 90%;
+    margin-left: 5%;
+    z-index: 999;
+}
+
+/*  */
+.m-tabBox {
+    height: 170rpx;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.m-tabBox>.box {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.m-tabBox>.box>.left>.bottom>.top {
+    font-size: 56rpx;
+    font-weight: 600;
+    color: rgba(254, 254, 254, 1);
+}
+
+.m-tabBox>.box>.left>.bottom>.bottom {
+    font-size: 30rpx;
+    font-weight: 400;
+    color: rgba(254, 254, 254, 1);
+}
+
+.m-tabBox>.box>.mid {
+    width: 0px;
+    height: 53rpx;
+    border: 3rpx solid rgba(112, 112, 112, 0.3);
+}
+
+.m-tabBox>.box>.left>.top {
+    position: relative;
+    font-size: 22rpx;
+    color: rgba(145, 145, 145, 1);
+}
+
+.m-tabBox>.box>.left>.bottom {
+    font-size: 70rpx;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+}
+
+.m-tabBox>.box>.left {
+    text-align: center;
+}
+
+/*  */
+.m-list {
+    width: 85%;
+    margin-left: 7.5%;
+    background-color: #fff;
+    border-radius: 20rpx;
+    margin-top: 50rpx;
+    height: calc(100vh - 450rpx);
+}
+
+.m-listTitle {
+    height: 86rpx;
+    font-size: 25rpx;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5% 0 5%;
+    align-items: center;
+    text-align: center;
+}
+
+.m-listTitle>.list1 {
+    width: 100rpx;
+}
+
+.m-listTitle>.list3 {
+    width: 260rpx;
+    text-align: center;
+}
+
+.m-lists {
+    height: 86rpx;
+    font-size: 25rpx;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 1);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5% 0 5%;
+    align-items: center;
+    text-align: center;
+}
+
+.m-lists>.list1 {
+    width: 100rpx;
+    height: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-lists>.list3 {
+    /* width: 130rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+
+.m-list>.top {
+    display: flex;
+    justify-content: center;
+    padding-top: 20rpx;
+}
+
+/* m-topImges */
+.m-topImges {
+    position: absolute;
+    top: -20rpx;
+    z-index: -1;
+}
+
+/* gundong */
+.gundong {
+    overflow: scroll;
+}
+
+/* 头像 */
+
+.cu-avatar {
+    font-variant: small-caps;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    color: var(--white);
+    white-space: nowrap;
+    position: relative;
+    width: 50rpx;
+    height: 50rpx;
+    background-size: cover;
+    background-position: center;
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+
+.round {
+    border-radius: 5000rpx;
+}
+
+/*  */
+.airPrp{
+    text-align: center;
+    font-size: 25rpx;
+    font-weight: bold;
+    margin-top: 50rpx;
+}

@@ -1,0 +1,67 @@
+<!-- 顶部轮播 -->
+<view class="topSwi">
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{dateData.images}}" wx:key="index">
+            <swiper-item>
+                <image mode="aspectFit" class="swiperImage" src="{{item}}" />
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<!-- 顶部轮播结束 -->
+
+
+
+<!-- 详情标题 -->
+<view class="dateTitle">
+    <view class="title-box">
+        <image src="/images/icon/23.png" />
+        <view>{{dateData.start_time}}</view>
+    </view>
+    <view class="title-box">
+        <image src="/images/icon/22.png" />
+        <view>{{dateData.place}}</view>
+    </view>
+    <view class="title-box">
+        <image src="/images/icon/25.png" />
+        <view>{{dateData.phone}}</view>
+    </view>
+</view>
+<!-- 详情标题结束 -->
+
+
+
+<!-- 活动详情 -->
+<view class="actDeta">
+    <view class="act-title">
+        <view class="t-xian"></view>
+        <view>活动详情</view>
+    </view>
+    <rich-text class="act-body" nodes="{{dateData.content}}"></rich-text>
+</view>
+<!-- 活动详情结束 -->
+
+
+
+<!-- 底部 -->
+<view class="bottom-box">
+    <view class="box1">
+        <button style="flex:1" open-type="share">
+            <view class="fx">
+                <image style="width:50rpx;height:50rpx" src="/images/icon/26.png" />
+                <view style="color: #d08686;font-size: 20rpx;">分享</view>
+            </view>
+        </button>
+        <view class="time">
+            <view>结束报名时间:</view>
+            <view style="color: #f51616;opacity: 0.4;line-height: 28px;">
+                {{dateData.end_time}}
+            </view>
+        </view>
+    </view>
+    <view class="box2" data-id="{{dateData.activity_id}}" data-place="{{dateData.place}}" data-name="{{dateData.name}}" data-phone="{{dateData.phone}}" data-starttime="{{dateData.start_time}}" bind:tap="goSuccess">
+        我要报名
+    </view>
+</view>
+<!-- 底部结束 -->
+<view class="di"></view>

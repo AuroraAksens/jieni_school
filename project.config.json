@@ -1,0 +1,315 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.12.0",
+  "appid": "wx37cacfcd92720afd",
+  "projectname": "MiniSchool",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "home-首页",
+          "pathName": "pages/home/home",
+          "query": "user=1",
+          "scene": null
+        },
+        {
+          "id": 1,
+          "name": "my-我的",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "details-详情页",
+          "pathName": "pages/details/details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "personal-个人中心",
+          "pathName": "pages/personal/personal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "become-成为认证用户",
+          "pathName": "pages/become/become",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "message-个人消息",
+          "pathName": "pages/message/message",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "money-钱包",
+          "pathName": "pages/money/money",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 7,
+          "name": "help-帮助和反馈",
+          "pathName": "pages/help/help",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "task-我的任务",
+          "pathName": "pages/task/task",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 9,
+          "name": "dynamic-添加动态or市场交易",
+          "pathName": "pages/dynamic/dynamic",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "add-task-添加任务",
+          "pathName": "pages/add-task/add-task",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "my-details-个人详情",
+          "pathName": "pages/my-details/my-details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "my-details-text-个人详情文本",
+          "pathName": "pages/my-details-text/my-details-text",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "identity-身份证认证",
+          "pathName": "pages/identity/identity",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 14,
+          "name": "take-提现",
+          "pathName": "pages/take/take",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "order-下单",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "school-选择学校",
+          "pathName": "pages/school/school",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "impression-添加印象",
+          "pathName": "pages/impression/impression",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 18,
+          "name": "personal-data--完善个人信息",
+          "pathName": "pages/personal-data/personal-data",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "bank-card-银行卡",
+          "pathName": "pages/bank-card/bank-card",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "my-task-我的接单",
+          "pathName": "pages/my-task/my-task",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "add-bank-card-添加银行卡",
+          "pathName": "pages/add-bank-card/add-bank-card",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "bank-card-log-提现记录",
+          "pathName": "pages/bank-card-log/bank-card-log",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "userDetails-账户明细",
+          "pathName": "pages/userDetails/userDetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "累计邀请",
+          "pathName": "pages/invitationList/invitationList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "邀请累计收入",
+          "pathName": "pages/invitationIncome/invitationIncome",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "校园合伙人",
+          "pathName": "pages/partner/partner",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "活动",
+          "pathName": "pages/activity/activity",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "活动详情",
+          "pathName": "pages/activityDetails/activityDetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "报名成功",
+          "pathName": "pages/activitySuccess/activitySuccess",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "核销员",
+          "pathName": "pages/checkCode/checkCode",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "显示二维码",
+          "pathName": "pages/action/action",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/partner",
+          "pathName": "pages/partner/partner",
+          "query": "user=1",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/details/details",
+          "pathName": "pages/details/details",
+          "query": "user=1",
+          "scene": null
+        },
+        {
+          "id": 34,
+          "name": "pages/BindingUsers/BindingUsers",
+          "pathName": "pages/BindingUsers/BindingUsers",
+          "query": "user=1",
+          "scene": 1047
+        }
+      ]
+    }
+  }
+}

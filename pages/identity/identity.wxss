@@ -1,0 +1,69 @@
+/* pages/identity/identity.wxss */
+page{
+  background-color: white;
+}
+.head{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45rpx;
+  background-color: rgb(255, 225, 182);
+  color: #ffa01b;
+  font-size: 20rpx;
+}
+.head>image{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.ide{
+  width: 100%;
+  padding-top: 60rpx;
+  padding-bottom: 140rpx;
+}
+
+
+.ide>.ide-box{
+  width: 100%;
+  height: 560rpx;
+  font-size: 23rpx;
+}
+
+.ide>.ide-box>.ide-text{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #ffa01b;
+  margin-bottom: 40rpx;
+}
+
+.ide>.ide-box>image{
+  width: 620rpx;
+  height: 530rpx;
+}
+.ide>.btn{
+  width: 230rpx;
+  height: 80rpx;
+  background-color: #E6E6E6;
+  color: #979797;
+  text-align: center;
+  margin-top: 60rpx;
+}
+
+.ide>.btns{
+  width: 230rpx;
+  height: 80rpx;
+  background-color: #fd9f25;
+  color: white;
+  text-align: center;
+  margin-top: 60rpx;
+}
+
+.i-ide-box{
+  font-size: 28rpx;
+  color: #f0a24a;
+  font-weight: bold;
+}

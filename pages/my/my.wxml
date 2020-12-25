@@ -1,0 +1,133 @@
+<!--pages/my/my.wxml-->
+<view class="dingbubj"></view>
+<view class="px-30" style="padding-bottom:200rpx;overflow: hidden;">
+
+
+	<!-- 个人信息 -->
+	<view class="personal px-20 py-30 d-fx ai-center">
+
+		<block wx:if="{{!type}}">
+			<view class="tou mr-30">
+				<image mode="aspectFill" class="avatar" src="{{userInfo.image}}"></image>
+				<image wx:if="{{userInfo.status == 2}}" class="vip" src="/images/vip.png"></image>
+			</view>
+			<view class="name">
+				<view>
+					{{userInfo.name}}
+					<image class="Gender ml-10" wx:if="{{userGender == 0  && userInfo.admin_id == 0 }}" src="/images/icon/show.png"></image>
+					<image class="Gender ml-10" wx:if="{{userGender == 1  && userInfo.admin_id == 0 }}" src="/images/icon/showboy.png"></image>
+					<image class="official ml-10" wx:if="{{userInfo.admin_id == 1}}" src="/images/icon/official.png"></image>
+				</view>
+					<view class="name-school mt-10" style="font-size: 24rpx;color:#FFFFFF">{{userInfo.school.name}}</view>
+			</view>
+		</block>
+
+		<block wx:else>
+			<view class="tou mr-30">
+				<image class="avatar" src="/images/touxiang-img.png"></image>
+				<image wx:if="{{status == 2}}" class="vip" src="/images/vip.png"></image>
+			</view>
+
+			<view class="name">
+				<view>未登录</view>
+				<button wx:if="{{userInfoType == true}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" hover-class="button-hover">
+					<view class="login mt-20" bindtap="goLogin">登录/注册</view>
+				</button>
+				<button wx:else hover-class="button-hover">
+					<view class="logins mt-20" bindtap="goLogin">请前往 <text style="color:white">首页</text> 允许授权</view>
+				</button>
+			</view>
+		</block>
+
+	</view>
+	<!-- 个人信息结束 -->
+
+
+	<!-- 任务卡 -->
+	<view class="Task-card bou-20 mb-50">
+		<view class="head d-fx jc-between">
+			<view class="left">我的任务</view>
+			<view class="right" data-id="0" bindtap="{{type?'checkLogin':'goTask'}}">查看全部</view>
+		</view>
+		<view class="body py-30 d-fx jc-around">
+			<block wx:for="{{imgData}}" wx:key="index">
+				<view class="icon" data-path="{{item.goPath}}" data-id="{{item.id}}" bindtap="{{type? 'checkLogin' : 'goTask'}}">
+					<image src="{{item.image}}"></image>
+					{{item.name}}
+				</view>
+			</block>
+		</view>
+	</view>
+	<!-- 任务卡结束 -->
+
+
+	<!-- 选项栏 -->
+	<view class="option px-30 py-20">
+		<view class="boxTitle">常用工具</view>
+		<view class="boxBody d-fx jc-start ai-center py-20 px-20">
+			<block wx:for="{{userInfo.status == 2 ? optionDatas : optionData}}" wx:key="index">
+				<view class="m-boxBody d-fx jc-center ai-center flex-cl {{index != 0 ? 'ml-40' : ''}}" data-path="{{item.goPath}}" bindtap="{{type ? 'checkLogin' : 'goto'}}">
+					<image class="mb-10" style="width:45rpx;height:45rpx" src="{{item.image}}"></image>
+					<view>{{item.name}}</view>
+				</view>
+			</block>
+		</view>
+	</view>
+
+
+	<view class="option px-30 py-20">
+		<view class="boxTitle">校园</view>
+		<view class="boxBody d-fx jc-start ai-center py-20 px-20">
+
+			<view class="m-boxBody d-fx jc-center ai-center flex-cl" data-path="/pages/activity/activity?sta=1" bindtap="{{type ? 'checkLogin' : 'goto'}}">
+				<image class="mb-10" style="width:45rpx;height:45rpx" src="/images/icon/my/sign.png"></image>
+				<view>我的报名</view>
+			</view>
+
+			<view class="m-boxBody d-fx jc-center ai-center flex-cl ml-30" data-path="/pages/partner/partner" bindtap="{{type ? 'checkLogin' : 'goto'}}">
+				<image class="mb-10" style="width:45rpx;height:45rpx" src="/images/icon/my/invitation.png"></image>
+				<view>校园合伙人</view>
+			</view>
+
+			<view class="m-boxBody d-fx jc-center ai-center flex-cl ml-30" wx:if="{{userInfo.cancel_id == 1}}" data-path="/pages/checkCode/checkCode" bindtap="{{type ? 'checkLogin' : 'goto'}}">
+				<image class="mb-10" style="width:45rpx;height:45rpx" src="/images/icon/my/Verification.png"></image>
+				<view>核销员</view>
+			</view>
+
+		</view>
+	</view>
+
+
+	<view class="option px-30 py-20">
+		<view class="boxTitle">设置</view>
+		<view class="boxBody d-fx jc-start ai-center py-20 px-20">
+
+			<view class="m-boxBody d-fx jc-center ai-center flex-cl" data-path="/pages/help/help" bindtap="{{type ? 'checkLogin' : 'goto'}}">
+				<image class="mb-10" style="width:45rpx;height:45rpx" src="/images/icon/my/help.png"></image>
+				<view>帮助与反馈</view>
+			</view>
+
+			<view class="m-boxBody d-fx jc-center ai-center flex-cl ml-30" bindtap="clearToken" wx:if="{{!type}}">
+				<image class="mb-10" style="width:38rpx;height:45rpx" src="/images/icon/loginOut.png"></image>
+				<view>退出登录</view>
+			</view>
+
+		</view>
+	</view>
+
+	<!-- <view class="option mt-30">
+		<block wx:for="{{userInfo.status == 2 ? optionDatas : optionData}}" wx:key="index">
+			<view class="body d-fx ai-center py-30 ml-20" data-path="{{item.goPath}}" bindtap="{{type ? 'checkLogin' : 'goto'}}">
+				<image src="{{item.image}}"></image>
+				<view class="ml-30 my-10">{{item.name}}</view>
+			</view>
+		</block>
+
+		<view class="body d-fx ai-center py-30 ml-20" bindtap="clearToken" wx:if="{{!type}}">
+			<image src="/images/icon/loginOut.png"></image>
+			<view class="ml-30 my-10" style="color:red">退出登录</view>
+		</view>
+	</view> -->
+	<!-- 选项栏结束 -->
+
+</view>

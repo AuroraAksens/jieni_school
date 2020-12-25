@@ -1,0 +1,66 @@
+/* pages/dynamic/dynamic.wxss */
+page {
+  background-color: #F9F9F9;
+}
+
+.textPage {
+  width: 95%;
+  margin: 20rpx auto;
+  background: #FFFFFF;
+  position: relative;
+}
+
+.text {
+  width: 85%;
+}
+
+.fabu{
+  width: 100%;
+  height: 100rpx;
+  margin-top: 40rpx;
+}
+
+.text-box {
+  width: 100%;
+}
+
+.buttom {
+  width: 200rpx !important;
+  height: 70rpx;
+  background: linear-gradient(180deg, #F8D98A 0%, #F4BC63 100%);
+  color: white;
+  font-size: 28rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 50rpx;
+  right: 50rpx;
+  border: 1px solid;
+  line-height: 70rpx;
+  padding: 0 0;
+  float: right;
+}
+
+.img>image {
+  width: 270rpx;
+  height: 300rpx;
+}
+
+.imageArr {
+  width: 200rpx;
+  height: 200rpx;
+  position: relative;
+}
+
+.delete {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 0;
+  right: 5rpx;
+  z-index: 50;
+}
+
+.delete>image {
+  width: 30rpx;
+  height: 30rpx;
+}

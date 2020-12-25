@@ -1,0 +1,47 @@
+<!--pages/take/take.wxml-->
+<view class="px-30">
+	<view class="take mt-30">
+		<view class="head pt-30">
+			<view class="head-top">到账账户</view>
+			<view class="head-center d-fx jc-start py-30">
+				<image src="{{userimg}}"></image>
+				<view class="ml-30" style="font-size: 34rpx;">
+					<view>{{username}}</view>
+					<view class="mt-20" style="font-size: 26rpx;color: #868686;">{{bankName}}</view>
+				</view>
+			</view>
+			<view class="head-bottom mt-20" style="font-size: 29rpx;">提现金额</view>
+		</view>
+
+		<view class="body d-fx jc-start ai-center">
+			<view>￥</view>
+			<input maxlength="10" style="font-size: 29rpx;" bindinput="takeMoney" value="{{money}}" placeholder="提现金额" />
+		</view>
+
+		<view class="foot">
+			<view class="foot-top d-fx jc-start">
+				<view style="color:#AAAAAA">零钱余额￥{{moneys}}</view>
+				<view class="ml-30" style="color:#85CF7A" bindtap="getOll">全部提现</view>
+			</view>
+			<view class="foot-center">
+				<button bindtap="takePost">提现</button>
+			</view>
+		</view>
+
+	</view>
+
+	<!-- 提现说明 -->
+	<view class="takeBody">
+		<view class="title">提现说明</view>
+		<view class="body mt-20">
+		  <view>1.当您推荐的订单确认收货并无维权退款后，佣金部分你即可提现；</view>
+			<view>2.由于提现金额将存入你登录绑定的个人微信零钱包，请确认微信已完成实名认证，否则无法成功提现；</view>
+			<view>3.每个账户每次最少提现1元，每日最大提现次数3次；</view>
+			<view>4.提现申请后，请耐心等待平台处理，平台将在2小时内将提现金额存入你的微信零钱包；</view>
+			<view>5.平台提现成功后，你可以通过微信账单进行查询</view>
+			<view>6.在提现过程中有任何疑问，请随时联系我们的客服</view>
+			</view>
+	</view>
+	<!-- 提现说明结束 -->
+
+</view>

@@ -1,0 +1,218 @@
+page {
+    background-color: white;
+}
+
+/* 搜索框 */
+.search {
+    width: 90%;
+    height: 70rpx;
+    border: 1rpx solid #EFC243;
+    margin: 30rpx auto;
+    border-radius: 40rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search>input {
+    width: 95%;
+    text-align: center;
+}
+
+
+
+/* 活动卡 */
+.actCard {
+    width: 90%;
+    margin: 40rpx auto;
+}
+
+.actCard>.act-box {
+    width: 100%;
+    height: 350rpx;
+    border-radius: 20rpx;
+    overflow: hidden;
+    background-color: white;
+    margin-top: 30rpx;
+    box-shadow: 0px 10px 20px rgba(209, 209, 209, 0.16);
+}
+
+.actCard>.act-box>.actBox-top {
+    width: 100%;
+    height: 230rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14rpx;
+}
+
+.actCard>.act-box>.actBox-top>.at-left {
+    width: 47%;
+    height: 100%;
+    border-radius: 10rpx;
+    overflow: hidden;
+    position: relative;
+}
+
+.actCard>.act-box>.actBox-top>.at-left>image {
+    width: 100%;
+    height: 100%;
+}
+
+.actCard>.act-box>.actBox-top>.at-left>.min-box {
+    width: 120rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #29a165;
+    color: white;
+    text-align: center;
+    line-height: 40rpx;
+    font-size: 22rpx;
+    border-radius: 0 0 20rpx 0;
+}
+
+.actCard>.act-box>.actBox-top>.at-left>.min-boxs {
+    width: 120rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #707070;
+    color: white;
+    text-align: center;
+    line-height: 40rpx;
+    font-size: 22rpx;
+    border-radius: 0 0 20rpx 0;
+}
+
+.actCard>.act-box>.actBox-top>.at-left>.min-boxss {
+    width: 120rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fc4646;
+    color: white;
+    text-align: center;
+    line-height: 40rpx;
+    font-size: 22rpx;
+    border-radius: 0 0 20rpx 0;
+}
+
+.actCard>.act-box>.actBox-top>.at-right {
+    width: 47%;
+    height: 100%;
+    padding-right: 20rpx;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.actCard>.act-box>.actBox-top>.at-right>.arBox1 {
+    font-size: 28rpx;
+    font-weight: bold;
+}
+
+.actCard>.act-box>.actBox-top>.at-right>.arBox2 {
+    font-size: 22rpx;
+    color: #2F3033;
+    line-height: 40rpx;
+}
+
+.actCard>.act-box>.actBox-top>.at-right>.arBox2>image {
+    width: 20rpx;
+    height: 20rpx;
+    padding-right: 10rpx;
+}
+
+.actCard>.act-box>.actBox-top>.at-right>.arBox4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 50rpx;
+    font-size: 22rpx;
+    color: #6A6A6A;
+}
+
+.actCard>.act-box>.actBox-bottom {
+    width: 95%;
+    height: 90rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 10rpx;
+    border-top: 1rpx solid #7070704f;
+}
+
+.actCard>.act-box>.actBox-bottom>.ab-left {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    font-size: 22rpx;
+    color: #2F3033;
+    font-weight: bold;
+    padding-left: 20rpx;
+}
+
+.actCard>.act-box>.actBox-bottom>.ab-right {
+    width: 135rpx;
+    height: 55rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    line-height: 55rpx;
+    color: white;
+    font-size: 20rpx;
+    background: linear-gradient(270deg, #EFC243 0%, #F3C952 55%, #F6CE5F 100%);
+}
+
+.actCard>.act-box>.actBox-bottom>.ab-rights {
+    width: 135rpx;
+    height: 55rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    line-height: 55rpx;
+    color: white;
+    font-size: 20rpx;
+    background: linear-gradient(270deg, #EFC243 0%, #F3C952 55%, #F6CE5F 100%);
+}
+
+
+.actCard>.act-box>.actBox-bottom>.ab-rightss {
+    width: 135rpx;
+    height: 55rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    line-height: 55rpx;
+    color: white;
+    font-size: 20rpx;
+    background: linear-gradient(270deg, #EFC243 0%, #F3C952 55%, #F6CE5F 100%);
+}
+
+.actCard>.act-box>.actBox-bottom>.ab-rightsss {
+    width: 135rpx;
+    height: 55rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    line-height: 55rpx;
+    color: white;
+    font-size: 20rpx;
+    background-color: rgb(156, 156, 156);
+}
+
+
+/* 暂无数据 */
+.zhanwu{
+    width: 100%;
+    height: 100rpx;
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 100rpx;
+    margin-top: 20rpx;
+    color: rgb(170, 170, 170);
+}
